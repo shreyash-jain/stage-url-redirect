@@ -6,7 +6,7 @@ const Post = () => {
   const { shortUrl } = router.query;
 
   const callApi = async () => {
-    if (shortUrl) {``
+    if (shortUrl) {
       try {
         await fetch(`https://i.habuild.in/${shortUrl}`, {
           method: "POST",
@@ -16,6 +16,9 @@ const Post = () => {
           },
           body: JSON.stringify({ a: 1, b: "Textual content" }),
         });
+
+        window.location.href = `https://i.habuild.in/${shortUrl}`;
+        
       } catch (error) {
         console.log("error aaya");
       }
