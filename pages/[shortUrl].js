@@ -8,7 +8,7 @@ const Post = () => {
   const callApi = async () => {
     if (shortUrl) {
       try {
-        await fetch(`https://i.habuild.in/${shortUrl}`, {
+        await fetch(`http://localhost:3001/${shortUrl}`, {
           method: "POST",
           headers: {
             Accept: "application/json",
@@ -17,8 +17,9 @@ const Post = () => {
           body: JSON.stringify({ a: 1, b: "Textual content" }),
         });
 
-        window.location.href = `https://i.habuild.in/${shortUrl}`;
-        
+
+        window.location.href = `http://localhost:3001/${shortUrl}`;
+
       } catch (error) {
         console.log("error aaya");
       }
