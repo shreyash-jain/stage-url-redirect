@@ -16,10 +16,7 @@ const Post = () => {
           },
           body: JSON.stringify({ a: 1, b: "Textual content" }),
         });
-
-
         window.location.href = `https://stage.api.habuild.in/${shortUrl}`;
-
       } catch (error) {
         console.log("error aaya");
       }
@@ -33,7 +30,32 @@ const Post = () => {
 
   console.log(shortUrl);
 
-  return <p>Post: {shortUrl}</p>;
+  return (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh",
+        textAlign: "center",
+      }}
+    >
+      {/* <p>Post: {shortUrl}</p> */}
+
+      <p
+        style={{
+          fontWeight: 500,
+          fontSize: "2rem",
+          WebkitBackgroundClip: "text",
+          backgroundClip: "text",
+          color: "transparent",
+          backgroundImage: "linear-gradient(toright, #6FD3BB, #CCF7A5)",
+        }}
+      >
+        Get Ready to do <span style={{ fontWeight: 700 }}>YOGA...</span>
+      </p>
+    </div>
+  );
 };
 
 export default Post;
