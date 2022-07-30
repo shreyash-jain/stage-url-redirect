@@ -8,7 +8,7 @@ const Post = () => {
   const callApi = async () => {
     if (shortUrl) {
       try {
-        await fetch(`https://i.habuild.in/${shortUrl}`, {
+        await fetch(`https://stage.api.habuild.in/${shortUrl}`, {
           method: "POST",
           headers: {
             Accept: "application/json",
@@ -18,7 +18,7 @@ const Post = () => {
         });
 
 
-        window.location.href = `https://i.habuild.in/${shortUrl}`;
+        window.location.href = `https://stage.api.habuild.in/${shortUrl}`;
 
       } catch (error) {
         console.log("error aaya");
