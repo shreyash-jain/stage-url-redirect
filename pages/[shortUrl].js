@@ -49,7 +49,7 @@ const Post = () => {
           WebkitBackgroundClip: "text",
           backgroundClip: "text",
           color: "transparent",
-          backgroundImage: "linear-gradient(toright, #6FD3BB, #CCF7A5)",
+          backgroundImage: "linear-gradient(to right, #6FD3BB, #CCF7A5)",
         }}
       >
         Get Ready to do <span style={{ fontWeight: 700 }}>YOGA...</span>
